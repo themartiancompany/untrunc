@@ -13,7 +13,7 @@ _os="$( \
 _pkg=untrunc
 _pkgname="${_pkg}"
 pkgname="${_pkgname}"
-pkgver=r189.d6ddf08
+pkgver=r168.a675909
 pkgrel=1
 libav_version=12.3
 pkgdesc="Restore a damaged (truncated) mp4, m4v, mov, 3gp video"
@@ -53,13 +53,14 @@ _os="$( \
   )
 _libav="https://github.com/libav/libav"
 _ffmpeg="https://git.ffmpeg.org/gitweb/ffmpeg"
-_commit="d6ddf08b78fd64ce3e06a67afa98348ba8eb9317"
+# _commit="d6ddf08b78fd64ce3e06a67afa98348ba8eb9317"
+_commit="a675909d9fa73079e1056df8fabc866fc53b26a3"
 # if [[ "${_os}" == "Android" ]]; then
 #   _commit="5f2fa79d25228633d7429fc1fa41f0789ad0d726"
 # fi
 source=(
-  # "${_pkgname}::git+${url}.git#commit=${_commit}"
-  "${_pkgname}::git+${url}.git#tag=fixtime"
+  "${_pkgname}::git+${url}.git#commit=${_commit}"
+  # "${_pkgname}::git+${url}.git#tag=fixtime"
   'framealloc.patch'
   "libav-${libav_version}.tar.gz::${_libav}/archive/refs/tags/v${libav_version}.tar.gz"
   "mathops.patch::${_ffmpeg}.git/commitdiff_plain/effadce6c756247ea8bae32dc13bb3e6f464f0eb"
