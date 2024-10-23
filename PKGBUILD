@@ -9,7 +9,7 @@
 
 _pkgname="untrunc"
 pkgname="${_pkgname}"
-pkgver=r184.8ae3c90
+pkgver=r187.5f2fa79
 pkgrel=1
 libav_version=12.3
 pkgdesc="Restore a damaged (truncated) mp4, m4v, mov, 3gp video"
@@ -109,6 +109,11 @@ build() {
     )
     _cxxflags+=(
       "${_extra_flags[@]}"
+    )
+  elif [[ "${_os}" == "GNU/Linux" ]]; then
+    _cflags+=(
+      -Wno-incompatible-function-pointer-types
+      -Wno-incompatible-pointer-types
     )
   fi
   cd \
