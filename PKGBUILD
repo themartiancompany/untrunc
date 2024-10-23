@@ -58,7 +58,8 @@ _commit="d6ddf08b78fd64ce3e06a67afa98348ba8eb9317"
 #   _commit="5f2fa79d25228633d7429fc1fa41f0789ad0d726"
 # fi
 source=(
-  "${_pkgname}::git+${url}.git#commit=${_commit}"
+  # "${_pkgname}::git+${url}.git#commit=${_commit}"
+  "${_pkgname}::git+${url}.git#tag=fixtime"
   'framealloc.patch'
   "libav-${libav_version}.tar.gz::${_libav}/archive/refs/tags/v${libav_version}.tar.gz"
   "mathops.patch::${_ffmpeg}.git/commitdiff_plain/effadce6c756247ea8bae32dc13bb3e6f464f0eb"
