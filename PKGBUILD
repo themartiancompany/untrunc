@@ -7,7 +7,8 @@
 # Contributor: sekret
 # Contributor: qubidt
 
-_pkgname="untrunc"
+_pkg=untrunc
+_pkgname="${_pkg}"
 pkgname="${_pkgname}"
 pkgver=r187.5f2fa79
 pkgrel=1
@@ -20,7 +21,9 @@ arch=(
   'aarch64'
   'armv7l'
 )
-url="https://github.com/ponchio/untrunc"
+_http="https://github.com"
+_ns="ponchio"
+url="${_http}/${_ns}/${_pkg}"
 license=(
   'GPL2'
 )
@@ -47,7 +50,8 @@ _os="$( \
   )
 _libav="https://github.com/libav/libav"
 _ffmpeg="https://git.ffmpeg.org/gitweb/ffmpeg"
-_commit="5f2fa79d25228633d7429fc1fa41f0789ad0d726"
+# _commit="5f2fa79d25228633d7429fc1fa41f0789ad0d726"
+_commit="d6ddf08b78fd64ce3e06a67afa98348ba8eb9317"
 source=(
   "${_pkgname}::git+${url}.git#commit=${_commit}"
   'framealloc.patch'
